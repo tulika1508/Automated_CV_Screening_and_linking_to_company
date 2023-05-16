@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Routes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      h3{
+        text-align: center;
+        line-height: 3;
+      }
+    </style>
+  </head>
+
+  <body>
+	<h3><em><%=job%> After CV Screening</em></h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">S.No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Coverletter</th>
+          <th scope="col">Resume</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(data.length){ for(var i = 0; i< data.length; i++) {%>
+        <tr>
+          <th scope="row"><%= (i+1) %></th>
+          <td><%= data[i].name%></td>
+          <td><%= data[i].email%></td>
+          <td><%= data[i].phone%></td>
+          <td><%= data[i].coverletter%></td>
+          <td><a href="/company/<%=data[i].resume%>">resume</a></td>
+        </tr>
+        <% } }else{ %>
+        <tr>
+          <td colspan="3">No user</td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

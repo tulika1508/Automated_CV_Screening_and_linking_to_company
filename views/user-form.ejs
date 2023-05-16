@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Application Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/style2.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      
+      <h1 class="h1">JOBSEEKER.COM</h1>
+
+      <h1>Job Application Form</h1>
+      <form action="/jobseeker.com%20form" method="POST" enctype="multipart/form-data">
+        <div class="form-control">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-control">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-control">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-control">
+          <label for="resume">Resume:(only .docx file)</label>
+          <input
+            type="file"
+            id="resume"
+            name="resume"
+            accept=".docx"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="cover-letter">Cover Letter:</label>
+          <textarea id="cover-letter" name="coverletter" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html> 
+

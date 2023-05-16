@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JOBSEEKER</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>  
+   <div class="topnav">
+  <a class="active" href="/jobseeker.com%20home" style="color: black">Home</a>
+  <a href="/jobseeker.com%20about">About Us</a>
+  <a href="/jobseeker.com%20contact">Contact Us</a>
+  <div class="topnav-right">
+    <a href="/jobseeker.com%20logout">Log out</a>
+  </div>
+</div>
+    <img class="back_img"src="Images/background image.jpg" alt="">
+    <div class="heading">
+    <h1>JOBSEEKER.COM</h1>
+    <h2>WHERE ALL YOUR DESIRES MEET</h2>
+  </div>
+    <div class="main_h1">
+    <h1>Perfect Place For Finding </h1>
+    <h1>Your Desired Job</h1>
+  </div>
+
+  <div class="click">
+    <button class="form" id="form-btn">Click here</button>
+  </div>
+
+<script>
+  const button = document.querySelector('#form-btn');
+  button.addEventListener('click', () => {
+    window.open('/jobseeker.com%20form','_self');
+  });
+</script>
+
+</body>
+</html>
